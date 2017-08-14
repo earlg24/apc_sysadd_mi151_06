@@ -31,12 +31,12 @@ $this->title = 'My Yii Application';
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Project Context</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>Inside the hotel industry, Hotel management includes many concepts like food service, servicing guests, etc. Housekeeping management takes care of and accommodates the needs of every guest in the hotel. Housekeepers clean the hotel rooms and maintain a clean environment for their guests. They do this in order to achieve a satisfactory rating from customers. Currently, the housekeeping management has identified some problems that affect their service quality. These problems are slow housekeeping service and human errors. With the help of a housekeeping system, the Housekeeping Management can minimize the occurrence of these problems.
+The proposed system will require QR codes in every hotel room. These QR codes will contain the hotel room number, status and task list depending on the type of the room. The housekeeper will update their status using the application to record their “time in” and “time out” of their task. The housekeeper will also record the tasks completed in the task list that is part of the system.
+After the housekeeper cleans the rooms assigned to him/her, the housekeeping supervisor will inspect each room that has been cleaned. This system aims to support the hotel staffs in doing the housekeeping chores and checks the room for the final requirement. 
+</p>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
             </div>
