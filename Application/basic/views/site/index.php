@@ -11,7 +11,7 @@ $this->title = 'My Yii Application';
 
         <p class="lead">Organize room maintenance tasks.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Try it!</a></p>
     </div>
 
     <div class="body-content">
