@@ -41,12 +41,13 @@ After the housekeeper cleans the rooms assigned to him/her, the housekeeping sup
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Purpose and Description</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>Unity Housekeeping System’s purpose is mainly to help staffs and guests with an easy and a user-friendly Housekeeping System application with hotel staffs’ task management, problem reports, suggestions on improving the hotel housekeeping management, and room checking. The supervisor will be assigning the housekeeper to clean the room and the supervisor will check each room that the housekeeper organized. 
+
+Another purpose of the application or system is to help housekeeping staff to be more productive because of the easy to use system. It also has a hotel room cleaning module that has a complete process on how the housekeeping management does the cleaning of each hotel rooms.
+
+</p>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
             </div>
