@@ -21,10 +21,7 @@ $this->title = 'My Yii Application';
 <<<<<<< HEAD
                 <h2>Objectives</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>The general objective of the team in building the Unity Housekeeping System application is to develop a system or application that will help SM Hotel’s housekeeping management and staff to do tasks in an easy, efficient, and more productive way. Unity Housekeeping System includes a module that will complete the application in helping SM Hotel’s housekeeping management.</p>
 =======
                 <h2>Introduction</h2>
 
