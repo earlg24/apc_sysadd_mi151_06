@@ -12,6 +12,7 @@ use Yii;
  * @property string $employee_lname
  * @property string $employee_mi
  * @property string $employee_position
+ * @property integer $employee_contactno
  *
  * @property HousekeepingLog[] $housekeepingLogs
  */
@@ -31,6 +32,8 @@ class Employee extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['employee_contactno'], 'required'],
+            [['employee_contactno'], 'integer'],
             [['employee_fname', 'employee_lname', 'employee_position'], 'string', 'max' => 45],
             [['employee_mi'], 'string', 'max' => 3],
         ];
@@ -47,6 +50,7 @@ class Employee extends \yii\db\ActiveRecord
             'employee_lname' => 'Employee Lname',
             'employee_mi' => 'Employee Mi',
             'employee_position' => 'Employee Position',
+            'employee_contactno' => 'Employee Contactno',
         ];
     }
 
