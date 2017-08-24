@@ -11,14 +11,14 @@ $this->title = 'My Yii Application';
 
         <p class="lead">Organize room maintenance tasks.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Try it!</a></p>
     </div>
 
     <div class="body-content">
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Introduction</h2>
 
                 <p>In 1939, Taal Vista Hotel was constructed at Aguinaldo Highway located in Tagaytay. 
 				Taal Vista has many accommodations where the hotel promotes different kinds of rooms. 
