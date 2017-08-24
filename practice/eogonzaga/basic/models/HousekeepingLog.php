@@ -17,11 +17,10 @@ use Yii;
  * @property string $cleaning_status
  * @property integer $inspected_by_employee_id
  * @property string $inspection_status
- * @property integer $housekeeping_log_details_id
  *
- * @property HousekeepingLogDetails $housekeepingLogDetails
- * @property Employee $employee
- * @property Room $room
+ * @property Employee4 $employee
+ * @property Room2 $room
+ * @property HousekeepingLogDetails[] $housekeepingLogDetails
  */
 class HousekeepingLog extends \yii\db\ActiveRecord
 {
@@ -39,13 +38,12 @@ class HousekeepingLog extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['room_id', 'room_room_type_id', 'employee_id', 'housekeeping_log_details_id'], 'required'],
-            [['room_id', 'room_room_type_id', 'employee_id', 'inspected_by_employee_id', 'housekeeping_log_details_id'], 'integer'],
+            [['room_id', 'room_room_type_id', 'employee_id'], 'required'],
+            [['room_id', 'room_room_type_id', 'employee_id', 'inspected_by_employee_id'], 'integer'],
+            [['housekeeping_log_status', 'cleaning_status', 'inspection_status'], 'string'],
             [['housekeeping_log_timein', 'housekeeping_log_timeout'], 'safe'],
-            [['housekeeping_log_status', 'cleaning_status', 'inspection_status'], 'string', 'max' => 45],
-            [['housekeeping_log_details_id'], 'exist', 'skipOnError' => true, 'targetClass' => HousekeepingLogDetails::className(), 'targetAttribute' => ['housekeeping_log_details_id' => 'id']],
-            [['employee_id'], 'exist', 'skipOnError' => true, 'targetClass' => Employee::className(), 'targetAttribute' => ['employee_id' => 'id']],
-            [['room_id', 'room_room_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Room::className(), 'targetAttribute' => ['room_id' => 'id', 'room_room_type_id' => 'room_type_id']],
+            [['employee_id'], 'exist', 'skipOnError' => true, 'targetClass' => Employee4::className(), 'targetAttribute' => ['employee_id' => 'id']],
+            [['room_id', 'room_room_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Room2::className(), 'targetAttribute' => ['room_id' => 'id', 'room_room_type_id' => 'room_type_id']],
         ];
     }
 
@@ -65,16 +63,7 @@ class HousekeepingLog extends \yii\db\ActiveRecord
             'cleaning_status' => 'Cleaning Status',
             'inspected_by_employee_id' => 'Inspected By Employee ID',
             'inspection_status' => 'Inspection Status',
-            'housekeeping_log_details_id' => 'Housekeeping Log Details ID',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getHousekeepingLogDetails()
-    {
-        return $this->hasOne(HousekeepingLogDetails::className(), ['id' => 'housekeeping_log_details_id']);
     }
 
     /**
@@ -82,7 +71,7 @@ class HousekeepingLog extends \yii\db\ActiveRecord
      */
     public function getEmployee()
     {
-        return $this->hasOne(Employee::className(), ['id' => 'employee_id']);
+        return $this->hasOne(Employee4::className(), ['id' => 'employee_id']);
     }
 
     /**
@@ -90,6 +79,14 @@ class HousekeepingLog extends \yii\db\ActiveRecord
      */
     public function getRoom()
     {
-        return $this->hasOne(Room::className(), ['id' => 'room_id', 'room_type_id' => 'room_room_type_id']);
+        return $this->hasOne(Room2::className(), ['id' => 'room_id', 'room_type_id' => 'room_room_type_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getHousekeepingLogDetails()
+    {
+        return $this->hasMany(HousekeepingLogDetails::className(), ['housekeeping_log_id' => 'id', 'housekeeping_log_room_id' => 'room_id', 'housekeeping_log_room_room_type_id' => 'room_room_type_id', 'housekeeping_log_employee_id' => 'employee_id']);
     }
 }
