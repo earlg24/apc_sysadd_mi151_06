@@ -11,7 +11,7 @@ use Yii;
  * @property string $room_type
  *
  * @property ChecklistItems[] $checklistItems
- * @property Room[] $rooms
+ * @property Room2[] $room2s
  */
 class RoomType extends \yii\db\ActiveRecord
 {
@@ -55,8 +55,8 @@ class RoomType extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getRooms()
+    public function getRoom2s()
     {
-        return $this->hasMany(Room::className(), ['room_type_id' => 'id']);
+        return $this->hasMany(Room2::className(), ['room_type_id' => 'id']);
     }
 }

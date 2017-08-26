@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\RoomType;
+use app\models\Employee4;
 
 /**
- * RoomTypeSearch represents the model behind the search form about `app\models\RoomType`.
+ * Employee4Search represents the model behind the search form about `app\models\Employee4`.
  */
-class RoomTypeSearch extends RoomType
+class Employee4Search extends Employee4
 {
     /**
      * @inheritdoc
@@ -19,7 +19,7 @@ class RoomTypeSearch extends RoomType
     {
         return [
             [['id'], 'integer'],
-            [['room_type'], 'safe'],
+            [['employee_fname', 'employee_lname', 'employee_mi', 'employee_position'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class RoomTypeSearch extends RoomType
      */
     public function search($params)
     {
-        $query = RoomType::find();
+        $query = Employee4::find();
 
         // add conditions that should always apply here
 
@@ -62,7 +62,10 @@ class RoomTypeSearch extends RoomType
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'room_type', $this->room_type]);
+        $query->andFilterWhere(['like', 'employee_fname', $this->employee_fname])
+            ->andFilterWhere(['like', 'employee_lname', $this->employee_lname])
+            ->andFilterWhere(['like', 'employee_mi', $this->employee_mi])
+            ->andFilterWhere(['like', 'employee_position', $this->employee_position]);
 
         return $dataProvider;
     }
