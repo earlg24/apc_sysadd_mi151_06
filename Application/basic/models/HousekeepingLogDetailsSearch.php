@@ -18,7 +18,7 @@ class HousekeepingLogDetailsSearch extends HousekeepingLogDetails
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id', 'housekeeping_log_id', 'housekeeping_log_room_id', 'housekeeping_log_room_room_type_id', 'housekeeping_log_employee_id'], 'integer'],
             [['housekeeping_log_details_checklist', 'housekeeping_log_details_status', 'housekeeping_log_details_timecompleted'], 'safe'],
         ];
     }
@@ -61,6 +61,10 @@ class HousekeepingLogDetailsSearch extends HousekeepingLogDetails
         $query->andFilterWhere([
             'id' => $this->id,
             'housekeeping_log_details_timecompleted' => $this->housekeeping_log_details_timecompleted,
+            'housekeeping_log_id' => $this->housekeeping_log_id,
+            'housekeeping_log_room_id' => $this->housekeeping_log_room_id,
+            'housekeeping_log_room_room_type_id' => $this->housekeeping_log_room_room_type_id,
+            'housekeeping_log_employee_id' => $this->housekeeping_log_employee_id,
         ]);
 
         $query->andFilterWhere(['like', 'housekeeping_log_details_checklist', $this->housekeeping_log_details_checklist])
