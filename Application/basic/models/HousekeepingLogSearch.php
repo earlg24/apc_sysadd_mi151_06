@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\HousekeepingLogDetails;
+use app\models\HousekeepingLog;
 
 /**
- * HousekeepingLogSearch represents the model behind the search form about `app\models\HousekeepingLogDetails`.
+ * HousekeepingLogSearch represents the model behind the search form about `app\models\HousekeepingLog`.
  */
-class HousekeepingLogSearch extends HousekeepingLogDetails
+class HousekeepingLogSearch extends HousekeepingLog
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class HousekeepingLogSearch extends HousekeepingLogDetails
     public function rules()
     {
         return [
-            [['id', 'housekeeping_log_id', 'housekeeping_log_room_id', 'housekeeping_log_room_room_type_id', 'housekeeping_log_employee_id'], 'integer'],
-            [['housekeeping_log_details_checklist', 'housekeeping_log_details_status', 'housekeeping_log_details_timecompleted'], 'safe'],
+            [['id', 'room_id', 'room_room_type_id', 'employee_id', 'inspected_by_employee_id'], 'integer'],
+            [['housekeeping_log_status', 'housekeeping_log_timein', 'housekeeping_log_timeout', 'cleaning_status', 'inspection_status'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class HousekeepingLogSearch extends HousekeepingLogDetails
      */
     public function search($params)
     {
-        $query = HousekeepingLogDetails::find();
+        $query = HousekeepingLog::find();
 
         // add conditions that should always apply here
 
@@ -60,15 +60,17 @@ class HousekeepingLogSearch extends HousekeepingLogDetails
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'housekeeping_log_details_timecompleted' => $this->housekeeping_log_details_timecompleted,
-            'housekeeping_log_id' => $this->housekeeping_log_id,
-            'housekeeping_log_room_id' => $this->housekeeping_log_room_id,
-            'housekeeping_log_room_room_type_id' => $this->housekeeping_log_room_room_type_id,
-            'housekeeping_log_employee_id' => $this->housekeeping_log_employee_id,
+            'room_id' => $this->room_id,
+            'room_room_type_id' => $this->room_room_type_id,
+            'employee_id' => $this->employee_id,
+            'housekeeping_log_timein' => $this->housekeeping_log_timein,
+            'housekeeping_log_timeout' => $this->housekeeping_log_timeout,
+            'inspected_by_employee_id' => $this->inspected_by_employee_id,
         ]);
 
-        $query->andFilterWhere(['like', 'housekeeping_log_details_checklist', $this->housekeeping_log_details_checklist])
-            ->andFilterWhere(['like', 'housekeeping_log_details_status', $this->housekeeping_log_details_status]);
+        $query->andFilterWhere(['like', 'housekeeping_log_status', $this->housekeeping_log_status])
+            ->andFilterWhere(['like', 'cleaning_status', $this->cleaning_status])
+            ->andFilterWhere(['like', 'inspection_status', $this->inspection_status]);
 
         return $dataProvider;
     }
