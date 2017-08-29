@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "checklist_category".
+ * This is the model  class for table "checklist_category".
  *
  * @property integer $id
  * @property string $checklist_category_name
