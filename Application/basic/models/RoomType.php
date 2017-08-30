@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "room_type".
+ * This is the model class for  table "room_type".
  *
  * @property integer $id
  * @property string $room_type
