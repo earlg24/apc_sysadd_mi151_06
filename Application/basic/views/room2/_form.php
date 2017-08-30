@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\RoomType;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Room2 */
@@ -12,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'room_type_id')->textInput() ?>
+    <?= $form->field($model, 'room_type_id')->dropDownList(ArrayHelper::map(RoomType::find()->all(), 'id', 'id'), ['prompt' => 'Select RoomTypeID']) ?>
 
     <?= $form->field($model, 'room_qr')->textInput() ?>
 
