@@ -47,6 +47,7 @@ class HousekeepingLogSearch extends HousekeepingLog
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+			'pagination' => false
         ]);
 
         $this->load($params);
