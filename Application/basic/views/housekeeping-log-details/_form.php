@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\HousekeepingLog;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\HousekeepingLogDetails */
@@ -18,7 +20,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'housekeeping_log_details_timecompleted')->textInput() ?>
 
-    <?= $form->field($model, 'housekeeping_log_id')->textInput() ?>
+    <?= $form->field($model, 'housekeeping_log_id')->dropDownList(ArrayHelper::map(HousekeepingLog::find()->all(), 'id', 'id'), ['prompt' => 'Select HousekeepingLogID']) ?>
 
     <?= $form->field($model, 'housekeeping_log_room_id')->textInput() ?>
 
