@@ -10,7 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * Room2Controller implements the CRUD actions for Room2 model.
+ * Room2Controller implements the CRUD action s for Room2 model.
  */
 class Room2Controller extends Controller
 {
