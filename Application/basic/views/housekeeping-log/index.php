@@ -24,16 +24,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'room_id',
             'room_room_type_id',
             'employee_id',
             'housekeeping_log_status',
-            // 'housekeeping_log_timein',
-            // 'housekeeping_log_timeout',
-            // 'cleaning_status',
-            // 'inspected_by_employee_id',
-            // 'inspection_status',
+            'housekeeping_log_timein',
+            'housekeeping_log_timeout',
+            'cleaning_status',
+            'inspected_by_employee_id',
+            'inspection_status',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
