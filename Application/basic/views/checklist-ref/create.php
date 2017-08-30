@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\RoomType */
+/* @var $model app\models\ChecklistRef */
 
-$this->title = 'Create Room Type';
-$this->params['breadcrumbs'][] = ['label' => 'Room Types', 'url' => ['index']];
+$this->title = 'Create Checklist Ref';
+$this->params['breadcrumbs'][] = ['label' => 'Checklist Refs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="room-type-create">
+<div class="checklist-ref-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\RoomTypeSearch */
+/* @var $searchModel app\models\Employee4Search */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Room Types';
+$this->title = 'Employee4s';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="room-type-index">
+<div class="employee4-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Room Type', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Employee4', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,7 +25,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'room_type',
+            'employee_fname',
+            'employee_lname',
+            'employee_mi',
+            'employee_position',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

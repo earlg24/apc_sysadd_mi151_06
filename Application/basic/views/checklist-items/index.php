@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\RoomTypeSearch */
+/* @var $searchModel app\models\ChecklistItemsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Room Types';
+$this->title = 'Checklist Items';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="room-type-index">
+<div class="checklist-items-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Room Type', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Checklist Items', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,7 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'room_type',
+            'checklist_ref_id',
+            'room_type_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
