@@ -12,7 +12,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'room_type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'room_type')->dropDownList([ 'Two-Bedroom Deluxe Suite' => 'Two-Bedroom Deluxe Suite', 
+														  'Premier Queen' => 'Premier Queen', 'Premier King' => 'Premier King', 
+														  'Deluxe Queen' => 'Deluxe Queen', 'Deluxe King' => 'Deluxe King', 'Batangas Suite' => 'Batangas Suite', ], ['prompt' => '']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
