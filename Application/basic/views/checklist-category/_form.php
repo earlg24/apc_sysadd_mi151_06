@@ -12,7 +12,8 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'checklist_category_name')->dropDownList(['Checklist for Inspector' => 'Checklist for Inspector', 'Checklist for Housekeeper' => 'Checklist for Housekeeper', 'Checklist for Two-Bedroom Deluxe Suite' => 'Checklist for Two-Bedroom Deluxe Suite']) ?>
+    <?= $form->field($model, 'checklist_category_name')->dropDownList(['Checklist for Inspector' => 'Checklist for Inspector', 'Checklist for Housekeeper' => 'Checklist for Housekeeper', 'Checklist for Two-Bedroom Deluxe Suite' => 'Checklist for Two-Bedroom Deluxe Suite', 
+	'Checklist for Premier Queen' => 'Checklist for Premier Queen', 'Checklist for Premier King' => 'Checklist for Premier King', 'Checklist for Deluxe Queen' => 'Checklist for Deluxe Queen', 'Checklist for Deluxe King' => 'Checklist for Deluxe King', 'Checklist for Batangas Suite' => 'Checklist for Batangas Suite', ]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
