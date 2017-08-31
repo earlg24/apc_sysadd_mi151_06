@@ -12,7 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'checklist_category_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'checklist_category_name')->dropDownList(['Checklist for Inspector' => 'Checklist for Inspector', 'Checklist for Housekeeper' => 'Checklist for Housekeeper', 'Checklist for Two-Bedroom Deluxe Suite' => 'Checklist for Two-Bedroom Deluxe Suite']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
