@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\models\RoomType;
 
+//qr code contains room info
 /* @var $this yii\web\View */
 /* @var $model app\models\Room2 */
 /* @var $form yii\widgets\ActiveForm */
