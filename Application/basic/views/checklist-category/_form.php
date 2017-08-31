@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+//checklist-categories
 /* @var $this yii\web\View */
 /* @var $model app\models\ChecklistCategory */
 /* @var $form yii\widgets\ActiveForm */
