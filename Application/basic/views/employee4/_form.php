@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'employee_mi')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'employee_position')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'employee_position')->dropDownList(['Inspector' => 'Inspector', 'Housekeeper' => 'Housekeeper',]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
